@@ -1,19 +1,16 @@
 total = 0;
-passCount = 1;
+count = 1;
 
-while(passCount <= 5):
+while(count <= 5):
 
-    i = int(input(str(passCount) + "번째 양수를 입력하십시오.\n>> "));
+    n = int(input(f"{count}번째 정수를 입력하세요!!>>>"));
 
-    if (i > 0):
+    if (n < 0):
 
-        passCount = passCount + 1;
-        total = total + i;
-
-    else:
-
-        print("[!] 양수를 입력해주세요.");
+        print("0이하의 정수는 처리할 수 없습니다.");
         continue;
 
-print("입력된 양수의 합은 " + str(total) + "입니다.");
-    
+    count = count + 1;
+    total = total + n;
+
+print(f"입력된 5개 정수의 합은 {total}입니다.");
